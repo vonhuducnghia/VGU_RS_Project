@@ -14,6 +14,7 @@ scheduler.SCH_Add_Task(task1.get_info, 1000, 2000)
 scheduler.SCH_Add_Task(task2.get_info, 3000, 4000)
 scheduler.SCH_Add_Task(task3.get_info, 2000, 3000)
 
+print('CALL EVENTS')
 while True: 
     scheduler.SCH_Update()
     scheduler.SCH_Dispatch_Tasks()
