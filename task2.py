@@ -1,7 +1,6 @@
-import time
-
-from scheduler import *
-from task1 import *
-from task2 import *
-
-
+class Task2:
+    def __init__(self):
+        print("init task 2")
+        return
+    def Task2_Run(self):
+        print("Task 2 activated!")
