@@ -1,1 +1,0 @@
-# \[VGU\] REAL-TIME SYSTEM
