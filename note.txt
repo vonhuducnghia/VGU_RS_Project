@@ -1,0 +1,25 @@
+16/05/2023
+
+import time 
+
+from mqtt import *
+from event_manager import *
+from yolobit import *
+
+mqtt.connect_wifi('abcd', '123456789')
+mqtt.connect_broker(sever='io.adafruit.com', port=1883,
+                    username='MinhLeDuc', 
+                    password='6092731ducminh')
+display.scroll('OK')
+
+def iot_task():
+ 	mqtt.publish('temperature', temperature())
+	mqtt.publish('humidity', humidity())
+
+
+event_manager.reset()
+event_manager.add_timer_event(5000, iot_task)
+
+while True:
+ 	event_manager.run() 
+  	time.sleep_ms(1000)
